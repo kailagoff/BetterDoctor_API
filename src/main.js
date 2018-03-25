@@ -2,15 +2,27 @@ import './styles.css';
 // import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { getDoctors } from './js/doctor_api.js';
+import { Doctor } from './js/doctor_api.js';
 
-getDoctors();
+const showDoctors = function(response) {
+  for(let i = 0; i < response.data.length; i++) {
+    let firstName = response.data[i].profile.first_name;
+    let lastName = response.data[i].profile.last_name;
+    $('#results').append(" " + '<li>' + firstName + " " + lastName + '</li>');
+  }
+}
 
 $(document).ready(function() {
   $("#doctor-form").submit(function(event) {
     event.preventDefault();
 
     const medicalIssue = $("#medical-issue").val();
+    const name = $("name").val();
+    console.log(name);
     console.log(medicalIssue);
+
+    let newSearch = new Doctor(name);
+
+    newSearch.getDoctors(name, showDoctors);
   })
 })
