@@ -11,8 +11,7 @@ const showDoctors = function(response) {
   for(let i = 0; i < response.data.length; i++) {
     let firstName = response.data[i].profile.first_name;
     let lastName = response.data[i].profile.last_name;
-    $('#results').text(`${firstName}`);
-    $('#results').text(`${lastName}`);
+    $('#results').append(`<h6> ${firstName} ${lastName} </h6>`);
     }
   }
 }
