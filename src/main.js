@@ -7,7 +7,7 @@ import { Doctor } from './js/doctor_api.js';
 
 const showSymptoms = function(response) {
   if (response.data.length == 0) {
-    $('#results').text("No doctors match your search.")
+    $('#errors').text("No doctors match your search.")
   } else {
       for(let i = 0; i < response.data.length; i++) {
         let firstName = response.data[i].profile.first_name;
@@ -25,7 +25,7 @@ const showSymptoms = function(response) {
 
 const showDoctors = function(response) {
   if (response.data.length == 0) {
-    $("#results").text("No doctors that match your search.")
+    $("#errors").text("No doctors that match your search.")
   } else {
   for(let i = 0; i < response.data.length; i++) {
     let firstName = response.data[i].profile.first_name;
