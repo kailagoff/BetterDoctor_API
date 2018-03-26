@@ -1,6 +1,7 @@
 export class Doctor{
-  constructor(name) {
+  constructor(name, medicalIssue) {
     this.name = name;
+    this.medicalIssue = medicalIssue;
   }
 
   getDoctors(name, showDoctors){
@@ -22,7 +23,8 @@ export class Doctor{
   getSpecialities(medicalIssue, showSymptoms) {
   /* eslint-disable */
   const apiKey = `${process.env.exports.apiKey}`;
-  /* eslint-enable */ $.get(`https://api.betterdoctor.com/2016-03-01/doctors?conditions=${medicalIssue}&location=45.523%2C-122.676%2C500&user_location=45.523%2C-122.676&skip=0&limit=10&user_key=${apiKey}`).then(function(response) {
+  /* eslint-enable */
+  $.get(`https://api.betterdoctor.com/2016-03-01/doctors?conditions=${medicalIssue}&location=45.523%2C-122.676%2C500&user_location=45.523%2C-122.676&skip=0&limit=10&user_key=${apiKey}`).then(function(response) {
     showSymptoms(response);
     console.log(response);
   })

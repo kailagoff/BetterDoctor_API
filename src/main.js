@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     const medicalIssue = $("#medical-issue").val();
     const name = $("#name").val();
-    let newSearch = new Doctor(name);
+    let newSearch = new Doctor(name, medicalIssue);
 
     newSearch.getDoctors(name, showDoctors);
     newSearch.getSpecialities(medicalIssue, showSymptoms);
