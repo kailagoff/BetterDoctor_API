@@ -11,7 +11,12 @@ const showDoctors = function(response) {
   for(let i = 0; i < response.data.length; i++) {
     let firstName = response.data[i].profile.first_name;
     let lastName = response.data[i].profile.last_name;
-    $('#results').append(`<h6> ${firstName} ${lastName} </h6>`);
+    let street = response.data[i].practices[i].visit_address.street;
+    let city = response.data[i].practices[i].visit_address.city;
+    let state = response.data[i].practices[i].visit_address.state;
+    let zipcode = response.data[i].practices[i].visit_address.zip;
+    let newPatient = response.data[i].practices[i].accepts_new_patients;
+    $('#results').append(`<h6> ${firstName} ${lastName} ${street} ${city} ${state} ${zipcode} ${newPatient}</h6>`);
     }
   }
 }
