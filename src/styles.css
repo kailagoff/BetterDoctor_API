@@ -4,5 +4,10 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
-  color: white;
+  color: black;
+  text-shadow: white 3px 3px 3px;
+}
+
+h1 {
+  padding-top: 50px;
 }

@@ -46,6 +46,7 @@ $(document).ready(function() {
   $("#doctor-search").submit(function(event) {
     event.preventDefault();
 
+
     const name = $("#name").val();
     let newSearch = new Doctor(name);
 
@@ -54,6 +55,7 @@ $(document).ready(function() {
 
   $("#speciality-search").submit(function(event) {
     event.preventDefault();
+
 
     const medicalIssue = $("#medical-issue").val();
     let symptomSearch = new Doctor(name, medicalIssue);
