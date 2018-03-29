@@ -14,7 +14,7 @@ export class Doctor{
       showDoctors(response);
     })
       .fail(function(error) {
-        $('#error').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+        $('#error').text(`There was an error processing your request: ${error.responseTest}. Please try again.`);
       });
   }
 
