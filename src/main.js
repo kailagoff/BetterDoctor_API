@@ -17,9 +17,12 @@ const showSymptoms = function(response) {
       let state = response.data[i].practices[i].visit_address.state;
       let zipcode = response.data[i].practices[i].visit_address.zip;
       let newPatient = response.data[i].practices[i].accepts_new_patients;
-
+      let phoneNumber = response.data[i].practices[0].phones[0].number;
+      let website = response.data[i].practices[0].website || "No website for this doctor";
       $('#speciality-results').append(`<h5>${firstName} ${lastName}</h5> <h6>${street} ${city} ${state} ${zipcode}</h6>
-      Takes new Patients?:${newPatient}`);
+      <h6>New Patients?:${newPatient}</h6>
+      Phone Number: <h6>${phoneNumber}</h6>
+      Website: <h6>${website}</h6>`);
     }
   }
 };
@@ -36,8 +39,12 @@ const showDoctors = function(response) {
       let state = response.data[i].practices[i].visit_address.state;
       let zipcode = response.data[i].practices[i].visit_address.zip;
       let newPatient = response.data[i].practices[i].accepts_new_patients;
+      let phoneNumber = response.data[i].practices[0].phones[0].number;
+      let website = response.data[i].practices[0].website || "No website for this doctor";
       $('#doctor-results').append(`<h5>${firstName} ${lastName}</h5> <h6>${street} ${city} ${state} ${zipcode}</h6>
-      Takes new Patients?:${newPatient}`);
+      <h6>New Patients?:${newPatient}</h6>
+      Phone Number: <h6>${phoneNumber}</h6>
+      Website: <h6>${website}</h6>`);
     }
   }
 };
