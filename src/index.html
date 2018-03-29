@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <meta charset="utf-8">
     <title>BetterDoctor</title>
   </head>
@@ -11,31 +11,28 @@
       <h2>Better Doctor API</h2>
       <h4>Find a doctor near you</h4>
     </div>
-    <div class="container">
       <div class="well">
-        <form id="speciality-search">
-          <label for="medical-issue">Search by medical issue:</label>
-          <input type="text" id="medical-issue">
-          <br>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
+        <div class="container">
+          <!-- <form id="speciality-search">
+            <label for="medical-issue">Search by medical issue:</label>
+            <input type="text" id="medical-issue">
+            <br>
+            <button type="submit" class="btn btn-danger">Find A Doctor</button>
+          </form> -->
 
-        <form id="doctor-search">
-          <label for="name">Search by doctor name:</label>
-          <input type="text" id="name">
-          <br>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-
+          <form id="doctor-search">
+            <label for="name">Search by doctor name:</label>
+            <input type="text" id="name">
+            <br>
+            <button type="submit" class="btn btn-danger">Find a Doctor</button>
+          </form>
       </div>
-      </div>
+    </div>
 
       <div class="container" id="results">
         <div id="doctor-results"></div>
         <div id="speciality-results"></div>
-        <div class="errors"></div>
       </div>
 
-    </div>
   </body>
 </html>
