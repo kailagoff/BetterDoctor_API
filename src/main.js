@@ -18,7 +18,8 @@ const showSymptoms = function(response) {
       let zipcode = response.data[i].practices[i].visit_address.zip;
       let newPatient = response.data[i].practices[i].accepts_new_patients;
 
-      $('#results').append(`<h6> ${firstName} ${lastName} ${street} ${city} ${state} ${zipcode} ${newPatient}</h6>`);
+      $('#speciality-results').append(`<h5>${firstName} ${lastName}</h5> <h6>${street} ${city} ${state} ${zipcode}</h6>
+      Takes new Patients?:${newPatient}`);
     }
   }
 };
@@ -55,7 +56,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     const medicalIssue = $("#medical-issue").val();
-    let symptomSearch = new Doctor(medicalIssue);
+    let symptomSearch = new Doctor(name, medicalIssue);
 
     symptomSearch.getSpecialities(medicalIssue, showSymptoms);
   });
