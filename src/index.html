@@ -13,20 +13,29 @@
     </div>
     <div class="container">
       <div class="well">
-        <form id="doctor-form">
-          <label for="name">Doctor Name:</label>
-          <input type="text" id="name">
-          <label for="medical-issue">Whats your Medical Issue?</label>
+        <form id="speciality-search">
+          <label for="medical-issue">Search by medical issue:</label>
           <input type="text" id="medical-issue">
+          <br>
           <button type="submit" class="btn btn-info">Submit</button>
         </form>
+
+        <form id="doctor-search">
+          <label for="name">Search by doctor name:</label>
+          <input type="text" id="name">
+          <br>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+      </div>
       </div>
 
-      <div class="results">
+      <div class="container" id="results">
+        <div id="doctor-results"></div>
+        <div id="speciality-results"></div>
+        <div class="errors"></div>
       </div>
 
-      <div class="errors">
-      </div>
     </div>
   </body>
 </html>
