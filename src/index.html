@@ -11,28 +11,36 @@
       <h2>Better Doctor API</h2>
       <h4>Find a doctor near you</h4>
     </div>
+    <div class="container">
       <div class="well">
-        <div class="container">
-          <form id="speciality-search">
-            <label for="medical-issue">Search by medical issue:</label>
-            <input type="text" id="medical-issue">
-            <br>
-            <button type="submit" class="btn btn-danger">Find A Doctor</button>
-          </form>
+          <div class="row">
+            <div class="col-md-8">
 
-          <form id="doctor-search">
-            <label for="name">Search by doctor name:</label>
-            <input type="text" id="name">
-            <br>
-            <button type="submit" class="btn btn-danger">Find a Doctor</button>
-          </form>
+            <form id="speciality-search">
+              <label for="medical-issue">Search by medical issue:</label>
+              <input type="text" id="medical-issue">
+              <br>
+              <button type="submit" class="btn btn-danger">Find A Doctor</button>
+            </form>
+
+            <form id="doctor-search">
+              <label for="name">Search by doctor name:</label>
+              <input type="text" id="name">
+              <br>
+              <button type="submit" class="btn btn-danger">Find a Doctor</button>
+            </form>
+
+          </div>
+          <div class="col-md-4">
+            <div id="doctor-results"></div>
+            <div id="speciality-results"></div>
+          </div>
+        </div>
       </div>
     </div>
 
-      <div class="container" id="results">
-        <div id="doctor-results"></div>
-        <div id="speciality-results"></div>
-      </div>
+      <!-- <div class="container" id="results">
+      </div> -->
 
   </body>
 </html>

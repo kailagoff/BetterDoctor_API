@@ -7,7 +7,7 @@ import { Doctor } from './js/doctor_api.js';
 
 const showSymptoms = function(response) {
   if (response.data.length == 0) {
-    $('#errors').text("No doctors match your search.")
+    $('#speciality-results').text("No doctors match your search for that medical issue. Try a different term")
   } else {
       for(let i = 0; i < response.data.length; i++) {
         let firstName = response.data[i].profile.first_name;
@@ -18,14 +18,14 @@ const showSymptoms = function(response) {
         let zipcode = response.data[i].practices[i].visit_address.zip;
         let newPatient = response.data[i].practices[i].accepts_new_patients;
 
-        $('#results').append(`<h6> ${firstName} ${lastName} ${street} ${city} ${state} ${zipcode} ${newPatient}</h6>`);//this line also doesnt work
+        $('#results').append(`<h6> ${firstName} ${lastName} ${street} ${city} ${state} ${zipcode} ${newPatient}</h6>`); 
       }
     }
   }
 
 const showDoctors = function(response) {
   if (response.data.length == 0) {
-    $("#doctor-results").text("No doctors that match your search.");
+    $("#doctor-results").text("No doctors with that name match your search. Check your spelling and try again");
   } else {
     for(let i = 0; i < response.data.length; i++) {
       let firstName = response.data[i].profile.first_name;

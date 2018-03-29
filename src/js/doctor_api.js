@@ -12,7 +12,6 @@ export class Doctor{
   $.get(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=45.5230%2C-122.413%2C25&user_location=45.5230%2C-122.413&skip=0&limit=20&user_key=${apiKey}`).then(function(response)
   {
     showDoctors(response);
-    console.log(response);
   })
     .fail(function(error) {
       $('#error').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
