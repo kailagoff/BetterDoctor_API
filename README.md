@@ -1,6 +1,6 @@
 # BetterDoctor API
 
-#### _By Kaila Goff_
+#### _Kaila Goff_
 
 #### _An application where users can input their symptoms and location and have relevant doctors in the area listed. 3-23-18_
 
